@@ -3,5 +3,5 @@
 
 コントローラーのライブラリ
 
-<img width="34" height="43" alt="PS4_IDE" src="https://github.com/user-attachments/assets/fa3746c9-adde-48e8-a89b-20bfd42e7c2f" />
+<img width="170" height="215" alt="PS4_IDE" src="https://github.com/user-attachments/assets/fa3746c9-adde-48e8-a89b-20bfd42e7c2f" />
 
