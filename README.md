@@ -9,5 +9,5 @@ PS5コントローラーのライブラリ
 
 ArduinoIDEにはライブラリがないのでGithubから引っ張ってくる必要があります。
 
-[ここ](https://github.com/un0038998/PS5Controller_ESP32)
+[ここ](https://github.com/BLACKROBOTICS/ps5Controller)
 
