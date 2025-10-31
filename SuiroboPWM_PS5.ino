@@ -12,7 +12,7 @@ int speedL = 100;
 void setup()
 {
   Serial.begin(115200);           // シリアル通信
-  ps5.begin("80:f3:da:41:53:de"); // コントローラーのMACアドレスを指定
+  ps5.begin("A0:FA:9C:2B:D4:DD"); // コントローラーのMACアドレスを指定
   Serial.println("Ready.");
   // PWMの設定
   for (int i = 0; i < 8; i++)
@@ -30,6 +30,8 @@ void loop()
   Serial.printf("Battery Level : %d\n", ps5.Battery());
   Serial.printf("Left Stick x at %d\n", ps5.LStickX());
   Serial.printf("Right Stick x at %d\n", ps5.RStickX());
+  Serial.printf("L2 : %d\n", ps5.L2());
+  Serial.printf("R2 : %d\n", ps5.R2());
   delay(50);
 }
 // 1モーター制御関数
