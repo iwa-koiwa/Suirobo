@@ -9,5 +9,5 @@ PS5コントローラーのライブラリ
 
 ArduinoIDEにはライブラリがないのでGithubから引っ張ってくる必要があります。
 
-[ここ](https://github.com/BLACKROBOTICS/ps5Controller)
+[ライブラリ](https://github.com/BLACKROBOTICS/ps5Controller)や[解説記事](https://note.com/kagyroy/n/ne3d1fd231143)を参考にして導入してください。
 
