@@ -1,3 +1,7 @@
+#include <ps5.h>
+#include <ps5Controller.h>
+#include <ps5_int.h>
+
 // ライブラリのインクルード
 #include "cmath"
 #include <ps5Controller.h>
@@ -25,13 +29,13 @@ void setup()
 void loop()
 {
   Serial.println("MD1");
-  MD1(ps5.LStickX(), ps5.RStickX()); // MD1の制御
-  MD2(ps5.L2(), ps5.R2());           // MD2の制御
-  Serial.printf("Battery Level : %d\n", ps5.Battery());
-  Serial.printf("Left Stick x at %d\n", ps5.LStickX());
-  Serial.printf("Right Stick x at %d\n", ps5.RStickX());
-  Serial.printf("L2 : %d\n", ps5.L2());
-  Serial.printf("R2 : %d\n", ps5.R2());
+  MD1(ps5.LStickY(), ps5.RStickY()); // MD1の制御
+  MD2(ps5.L2Value(), ps5.R2Value());           // MD2の制御
+  // Serial.printf("Battery Level : %d\n", ps5.Battery());
+  // Serial.printf("Left Stick y at %d\n", ps5.LStickY());
+  Serial.printf("Right Stick y at %d\n", ps5.RStickY());
+  Serial.printf("L2 button at %d\n", ps5.L2Value());
+  Serial.printf("R2 button at %d\n", ps5.R2Value());
   delay(50);
 }
 // 1モーター制御関数
@@ -46,6 +50,7 @@ void MD1(int left, int right)
   {
     ledcWrite(0, 0);
     ledcWrite(1, abs(left));
+    Serial.printf("%d\n",left);
   }
   else
   {
@@ -71,12 +76,12 @@ void MD1(int left, int right)
 // 2モーター制御関数
 void MD2(int left, int right)
 {
-  if (left > 20)
+  if (left > 200)
   {
     ledcWrite(4, left + 127);
     ledcWrite(5, 0);
   }
-  else if (left < 20)
+  else if (140 > left > 200)
   {
     ledcWrite(4, 0);
     ledcWrite(5, abs(left) + 127);
@@ -86,15 +91,16 @@ void MD2(int left, int right)
     ledcWrite(4, 0);
     ledcWrite(5, 0);
   }
-  if (right > 20)
+  if (right > 200)
   {
     ledcWrite(6, right + 127);
     ledcWrite(7, 0);
   }
-  else if (right < 20)
+  else if (140 > right > 200)
   {
     ledcWrite(6, 0);
     ledcWrite(7, abs(right) + 127);
+    Serial.printf("go");
   }
   else
   {
@@ -102,3 +108,4 @@ void MD2(int left, int right)
     ledcWrite(7, 0);
   }
 }
+
