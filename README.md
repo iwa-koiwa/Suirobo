@@ -9,7 +9,7 @@ ESP32はファイル/基本設定から設定画面を開き追加のボード�
 
 [PS4コントローラーのライブラリ](https://github.com/YuraBogdan/PS4-esp32)
 
-
+また、ArduinoIDEやplatformioにライブラリが存在するので[解説記事](https://note.com/npaint/n/nb794b32a88e0)を参考にして導入してください。
 
 [PS5コントローラーのライブラリ](https://github.com/BLACKROBOTICS/ps5Controller)
 
