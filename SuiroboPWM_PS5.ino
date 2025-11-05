@@ -30,7 +30,7 @@ void loop()
 {
   Serial.println("MD1");
   MD1(ps5.LStickY(), ps5.RStickY()); // MD1の制御
-  MD2(ps5.L2Value(), ps5.R2Value());           // MD2の制御
+  MD2(ps5.L2Value(), ps5.R2Value()); // MD2の制御
   // Serial.printf("Battery Level : %d\n", ps5.Battery());
   // Serial.printf("Left Stick y at %d\n", ps5.LStickY());
   Serial.printf("Right Stick y at %d\n", ps5.RStickY());
